@@ -41,7 +41,7 @@ public class Grafo
         ListaAdj.get(a).add(new Par(w,b));
         if(dirigido==false)
         {
-        ListaAdj.get(b).add(new Par(w,b));
+        ListaAdj.get(b).add(new Par(w,a));
         }
     }
         
@@ -116,6 +116,7 @@ public class Grafo
              for(int j=0;j<ListaAdj.get(i).size();j++)
              {
                 String formato = String.format("%.2f", ListaAdj.get(i).get(j).first() );
+                
              neri += i + ";"+ListaAdj.get(i).get(j).second() + ";" + formato + "\n";
              }
          
@@ -438,6 +439,9 @@ Grafo Kruskal_D(){
          Triple front = EdgeList.get(i);
          if (!conjuntos.isSameSet(front.second(), front.third())) {          // check
              mst_cost += front.first();            // add the weight of e to MST
+             if(front.second() == front.third()){
+                 System.out.println("Daniiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii");
+             }
              g9.AgregarArista(front.second(),front.third(),front.first());
              conjuntos.unionSet(front.second(), front.third());            // link them
          }

@@ -472,7 +472,7 @@ public class Main {
                 
                 
           //PROYECTO 3
-         //--------------------------------------------------------------------------------       
+         //-------------------------------------------------------------------------------------------     
 /*
         
          ERDOS 30
@@ -658,7 +658,7 @@ public class Main {
         Imprime = new PrintWriter("C:/Proyecto3/BARABASI100_PESOS_DIJKSTRA.csv");
         Imprime.write(g3Dijkstra.imprimirGrafoDijkstra());
         Imprime.close ();
-   */   
+     
          //BARABASI 500
          
         Grafo g4= Grafo.genBarabasiAlbert(500,5,false,false);  
@@ -675,42 +675,313 @@ public class Main {
         Imprime.write(g3Dijkstra.imprimirGrafoDijkstra());
         Imprime.close ();
     
-    
-   // PROYECTO 4
-    
-    /*
-          Grafo g1= Grafo.genErdosRenyi(30,50,false,false);  
-          g1.randomEdgeValues(1,50);
+   */  
+                //PROYECTO 4
+         //----------------------------------------------------------------------------------------- 
+       
+         //ERDOS 30
+         
+          Grafo g1= Grafo.genErdosRenyi(30,54,false,false);  
+          g1.randomEdgeValues(1,90);
           PrintWriter Imprime=new PrintWriter("C:/Proyecto4/ERDOS30.csv");
           Imprime.write(g1.imprimirGrafoConPesos());
           Imprime.close ();
 
-          Grafo g1KruskalD = g1.Kruskal_D();
-          Imprime = new PrintWriter("C:/Proyecto4/ERDOS30_KruskalD.csv");
-          Imprime.write(g1KruskalD.imprimirGrafoConPesos());
-          Imprime.close ();   
+         Grafo g1KruskalD = g1.Kruskal_D();
+         Imprime = new PrintWriter("C:/Proyecto4/ERDOS30_KruskalD.csv");
+         g1KruskalD.imprimirGrafoConPesos();
+         g1KruskalD.imprimirGrafo();
+         Imprime.write(g1KruskalD.imprimirGrafoConPesos());
+         Imprime.close ();   
 
+          Grafo g1KruskalI = g1.Kruskal_I();
+          Imprime = new PrintWriter("C:/Proyecto4/ERDOS30_Kruskal_I.csv");
+          Imprime.write(g1KruskalI.imprimirGrafoConPesos());
+          Imprime.close ();           
+          
           Grafo g1Prim = g1.Prim();
           Imprime = new PrintWriter("C:/Proyecto4/ERDOS30_Prim.csv");
           Imprime.write(g1Prim.imprimirGrafoConPesos());
-          Imprime.close ();   
+          Imprime.close (); 
 
+          //ERDOS 100
+          
+          g1= Grafo.genErdosRenyi(100,250,false,false);  
+          g1.randomEdgeValues(1,90);
+          Imprime=new PrintWriter("C:/Proyecto4/ERDOS100.csv");
+          Imprime.write(g1.imprimirGrafoConPesos());
+          Imprime.close ();
 
-          Grafo g1KruskalI = g1.Kruskal_I();
-          Imprime = new PrintWriter("C:/Proyecto4/ERDOS30_KruskalI.csv");
+         g1KruskalD = g1.Kruskal_D();
+         Imprime = new PrintWriter("C:/Proyecto4/ERDOS100_KruskalD.csv");
+         g1KruskalD.imprimirGrafoConPesos();
+         g1KruskalD.imprimirGrafo();
+         Imprime.write(g1KruskalD.imprimirGrafoConPesos());
+         Imprime.close ();   
+
+          g1KruskalI = g1.Kruskal_I();
+          Imprime = new PrintWriter("C:/Proyecto4/ERDOS100_Kruskal_I.csv");
           Imprime.write(g1KruskalI.imprimirGrafoConPesos());
-          Imprime.close ();   
-        //PrintWriter Imprime=new PrintWriter("C:/Proyecto1/BARABASI30.csv");
+          Imprime.close ();           
+          
+          g1Prim = g1.Prim();
+          Imprime = new PrintWriter("C:/Proyecto4/ERDOS100_Prim.csv");
+          Imprime.write(g1Prim.imprimirGrafoConPesos());
+          Imprime.close (); 
 
-        //Imprime.write(g4.imprimirGrafo());
-        //Imprime.close ();
-    
-    */
-    
-    
-    
-    
-    
+          //ERDOS 500
+          
+          g1= Grafo.genErdosRenyi(500,800,false,false);  
+          g1.randomEdgeValues(1,90);
+           Imprime=new PrintWriter("C:/Proyecto4/ERDOS500.csv");
+          Imprime.write(g1.imprimirGrafoConPesos());
+          Imprime.close ();
+
+         g1KruskalD = g1.Kruskal_D();
+         Imprime = new PrintWriter("C:/Proyecto4/ERDOS500_KruskalD.csv");
+         g1KruskalD.imprimirGrafoConPesos();
+         g1KruskalD.imprimirGrafo();
+         Imprime.write(g1KruskalD.imprimirGrafoConPesos());
+         Imprime.close ();   
+
+          g1KruskalI = g1.Kruskal_I();
+          Imprime = new PrintWriter("C:/Proyecto4/ERDOS500_Kruskal_I.csv");
+          Imprime.write(g1KruskalI.imprimirGrafoConPesos());
+          Imprime.close ();           
+          
+          g1Prim = g1.Prim();
+          Imprime = new PrintWriter("C:/Proyecto4/ERDOS500_Prim.csv");
+          Imprime.write(g1Prim.imprimirGrafoConPesos());
+          Imprime.close (); 
+     
+          
+        //GILBERT 30
+         
+        Grafo g2= Grafo.genGilbert(30,0.3,false,false);  
+        g2.randomEdgeValues(1,90);
+        Imprime=new PrintWriter("C:/Proyecto4/GILBERT30_PESOS.csv");
+        Imprime.write(g2.imprimirGrafoConPesos());
+        Imprime.close ();
+        
+        g1KruskalD = g2.Kruskal_D();
+        Imprime = new PrintWriter("C:/Proyecto4/GILBERT30_KruskalD.csv");
+        g1KruskalD.imprimirGrafoConPesos();
+        g1KruskalD.imprimirGrafo();
+        Imprime.write(g1KruskalD.imprimirGrafoConPesos());
+        Imprime.close ();
+        
+
+        g1KruskalI = g2.Kruskal_I();
+        Imprime = new PrintWriter("C:/Proyecto4/GILBERT30_Kruskal_I.csv");
+        Imprime.write(g1KruskalI.imprimirGrafoConPesos());
+        Imprime.close ();           
+
+        g1Prim = g2.Prim();
+        Imprime = new PrintWriter("C:/Proyecto4/GILBERT30_Prim.csv");
+        Imprime.write(g1Prim.imprimirGrafoConPesos());
+        Imprime.close (); 
+
+        //GILBERT 100
+        
+        g2= Grafo.genGilbert(100,0.3,false,false);  
+        g2.randomEdgeValues(1,90);
+        Imprime=new PrintWriter("C:/Proyecto4/GILBERT100_PESOS.csv");
+        Imprime.write(g2.imprimirGrafoConPesos());
+        Imprime.close ();
+        
+        g1KruskalD = g2.Kruskal_D();
+        Imprime = new PrintWriter("C:/Proyecto4/GILBERT100_KruskalD.csv");
+        g1KruskalD.imprimirGrafoConPesos();
+        g1KruskalD.imprimirGrafo();
+        Imprime.write(g1KruskalD.imprimirGrafoConPesos());
+        Imprime.close ();
+        
+        g1KruskalI = g2.Kruskal_I();
+        Imprime = new PrintWriter("C:/Proyecto4/GILBERT100_Kruskal_I.csv");
+        Imprime.write(g1KruskalI.imprimirGrafoConPesos());
+        Imprime.close ();           
+
+        g1Prim = g2.Prim();
+        Imprime = new PrintWriter("C:/Proyecto4/GILBERT100_Prim.csv");
+        Imprime.write(g1Prim.imprimirGrafoConPesos());
+        Imprime.close (); 
+
+        //GILBERT 500
+        
+        g2= Grafo.genGilbert(500,0.09,false,false);  
+        g2.randomEdgeValues(1,90);
+        Imprime=new PrintWriter("C:/Proyecto4/GILBERT500_PESOS.csv");
+        Imprime.write(g2.imprimirGrafoConPesos());
+        Imprime.close ();
+        
+        g1KruskalD = g2.Kruskal_D();
+        Imprime = new PrintWriter("C:/Proyecto4/GILBERT500_KruskalD.csv");
+        g1KruskalD.imprimirGrafoConPesos();
+        g1KruskalD.imprimirGrafo();
+        Imprime.write(g1KruskalD.imprimirGrafoConPesos());
+        Imprime.close ();
+        
+        g1KruskalI = g2.Kruskal_I();
+        Imprime = new PrintWriter("C:/Proyecto4/GILBERT500_Kruskal_I.csv");
+        Imprime.write(g1KruskalI.imprimirGrafoConPesos());
+        Imprime.close ();           
+
+        g1Prim = g2.Prim();
+        Imprime = new PrintWriter("C:/Proyecto4/GILBERT500_Prim.csv");
+        Imprime.write(g1Prim.imprimirGrafoConPesos());
+        Imprime.close (); 
+
+        //GEOGRAFICO 30
+        
+        Grafo g3= Grafo.genGeografico(30,0.2,false,false);  
+        g3.randomEdgeValues(1,90);
+        Imprime=new PrintWriter("C:/Proyecto4/GEOGRAFICO30_PESOS.csv");
+        Imprime.write(g3.imprimirGrafoConPesos());
+        Imprime.close ();
+        
+        g1KruskalD = g3.Kruskal_D();
+        Imprime = new PrintWriter("C:/Proyecto4/GEOGRAFICO30_KruskalD.csv");
+        g1KruskalD.imprimirGrafoConPesos();
+        g1KruskalD.imprimirGrafo();
+        Imprime.write(g1KruskalD.imprimirGrafoConPesos());
+        Imprime.close ();
+
+        g1KruskalI = g3.Kruskal_I();
+        Imprime = new PrintWriter("C:/Proyecto4/GEOGRAFICO30_Kruskal_I.csv");
+        Imprime.write(g1KruskalI.imprimirGrafoConPesos());
+        Imprime.close ();           
+
+        g1Prim = g3.Prim();
+        Imprime = new PrintWriter("C:/Proyecto4/GEOGRAFICO30_Prim.csv");
+        Imprime.write(g1Prim.imprimirGrafoConPesos());
+        Imprime.close (); 
+
+        //GEOGRAFICO 100
+        
+        g3= Grafo.genGeografico(100,0.2,false,false);  
+        g3.randomEdgeValues(1,90);
+        Imprime=new PrintWriter("C:/Proyecto4/GEOGRAFICO100_PESOS.csv");
+        Imprime.write(g3.imprimirGrafoConPesos());
+        Imprime.close ();
+        
+        g1KruskalD = g3.Kruskal_D();
+        Imprime = new PrintWriter("C:/Proyecto4/GEOGRAFICO100_KruskalD.csv");
+        g1KruskalD.imprimirGrafoConPesos();
+        g1KruskalD.imprimirGrafo();
+        Imprime.write(g1KruskalD.imprimirGrafoConPesos());
+        Imprime.close ();
+        
+        g1KruskalI = g3.Kruskal_I();
+        Imprime = new PrintWriter("C:/Proyecto4/GEOGRAFICO100_Kruskal_I.csv");
+        Imprime.write(g1KruskalI.imprimirGrafoConPesos());
+        Imprime.close ();           
+
+        g1Prim = g3.Prim();
+        Imprime = new PrintWriter("C:/Proyecto4/GEOGRAFICO100_Prim.csv");
+        Imprime.write(g1Prim.imprimirGrafoConPesos());
+        Imprime.close (); 
+
+        //GEOGRAFICO 500
+        
+        g3= Grafo.genGeografico(500,0.1,false,false);  
+        g3.randomEdgeValues(1,90);
+        Imprime=new PrintWriter("C:/Proyecto4/GEOGRAFICO500_PESOS.csv");
+        Imprime.write(g3.imprimirGrafoConPesos());
+        Imprime.close ();
+        
+        g1KruskalD = g3.Kruskal_D();
+        Imprime = new PrintWriter("C:/Proyecto4/GEOGRAFICO500_KruskalD.csv");
+        g1KruskalD.imprimirGrafoConPesos();
+        g1KruskalD.imprimirGrafo();
+        Imprime.write(g1KruskalD.imprimirGrafoConPesos());
+        Imprime.close ();
+        
+        g1KruskalI = g3.Kruskal_I();
+        Imprime = new PrintWriter("C:/Proyecto4/GEOGRAFICO500_Kruskal_I.csv");
+        Imprime.write(g1KruskalI.imprimirGrafoConPesos());
+        Imprime.close ();           
+
+        g1Prim = g3.Prim();
+        Imprime = new PrintWriter("C:/Proyecto4/GEOGRAFICO500_Prim.csv");
+        Imprime.write(g1Prim.imprimirGrafoConPesos());
+        Imprime.close ();
+        
+        
+        //BARABASI 30
+        
+        Grafo g4= Grafo.genBarabasiAlbert(30,12,false,false);  
+        g4.randomEdgeValues(1,90);
+        Imprime=new PrintWriter("C:/Proyecto4/BARABASI30_PESOS.csv");
+        Imprime.write(g4.imprimirGrafoConPesos());
+        Imprime.close ();
+        
+         g1KruskalD = g4.Kruskal_D();
+        Imprime = new PrintWriter("C:/Proyecto4/BARABASI30_KruskalD.csv");
+        g1KruskalD.imprimirGrafoConPesos();
+        g1KruskalD.imprimirGrafo();
+        Imprime.write(g1KruskalD.imprimirGrafoConPesos());
+        Imprime.close ();
+        
+        g1KruskalI = g4.Kruskal_I();
+        Imprime = new PrintWriter("C:/Proyecto4/BARABASI30_Kruskal_I.csv");
+        Imprime.write(g1KruskalI.imprimirGrafoConPesos());
+        Imprime.close ();           
+
+        g1Prim = g4.Prim();
+        Imprime = new PrintWriter("C:/Proyecto4/BARABASI30_Prim.csv");
+        Imprime.write(g1Prim.imprimirGrafoConPesos());
+        Imprime.close ();
+       
+        //BARABASI 100
+
+        g4= Grafo.genBarabasiAlbert(100,12,false,false);  
+        g4.randomEdgeValues(1,90);
+        Imprime=new PrintWriter("C:/Proyecto4/BARABASI100_PESOS.csv");
+        Imprime.write(g4.imprimirGrafoConPesos());
+        Imprime.close ();
+
+        g1KruskalD = g4.Kruskal_D();
+        Imprime = new PrintWriter("C:/Proyecto4/BARABASI100_KruskalD.csv");
+        g1KruskalD.imprimirGrafoConPesos();
+        g1KruskalD.imprimirGrafo();
+        Imprime.write(g1KruskalD.imprimirGrafoConPesos());
+        Imprime.close ();
+
+        g1KruskalI = g4.Kruskal_I();
+        Imprime = new PrintWriter("C:/Proyecto4/BARABASI100_Kruskal_I.csv");
+        Imprime.write(g1KruskalI.imprimirGrafoConPesos());
+        Imprime.close ();           
+ 
+        g1Prim = g4.Prim();
+        Imprime = new PrintWriter("C:/Proyecto4/BARABASI100_Prim.csv");
+        Imprime.write(g1Prim.imprimirGrafoConPesos());
+        Imprime.close ();
+       
+        //BARABASI 500
+        
+        g4= Grafo.genBarabasiAlbert(500,15,false,false);  
+        g4.randomEdgeValues(1,90);
+        Imprime=new PrintWriter("C:/Proyecto4/BARABASI500_PESOS.csv");
+        Imprime.write(g4.imprimirGrafoConPesos());
+        Imprime.close ();
+         
+        g1KruskalD = g4.Kruskal_D();
+        Imprime = new PrintWriter("C:/Proyecto4/BARABASI500_KruskalD.csv");
+        g1KruskalD.imprimirGrafoConPesos();
+        g1KruskalD.imprimirGrafo();
+        Imprime.write(g1KruskalD.imprimirGrafoConPesos());
+        Imprime.close ();
+
+        g1KruskalI = g4.Kruskal_I();
+        Imprime = new PrintWriter("C:/Proyecto4/BARABASI500_Kruskal_I.csv");
+        Imprime.write(g1KruskalI.imprimirGrafoConPesos());
+        Imprime.close ();           
+
+        g1Prim = g4.Prim();
+        Imprime = new PrintWriter("C:/Proyecto4/BARABASI500_Prim.csv");
+        Imprime.write(g1Prim.imprimirGrafoConPesos());
+        Imprime.close ();
+
     }
 
 }
